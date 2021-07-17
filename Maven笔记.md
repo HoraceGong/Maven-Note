@@ -48,16 +48,16 @@ Maven的作用：
 
 ```xml
 <mirrors>
-	<mirror>
+    <mirror>
     <!-- 此镜像的唯一标识符，用来区分不同的mirror元素 -->
-		<id>nexus-aliyun</id>
+	<id>nexus-aliyun</id>
     <!-- 对那种仓库进行镜像（就是替代哪种仓库）-->
-		<mirrorOf>central</mirrorOf>
+	<mirrorOf>central</mirrorOf>
     <!-- 镜像名称 -->
-		<name>Nexus aliyun</name>
+	<name>Nexus aliyun</name>
     <!-- 镜像URL -->
-		<url>http://maven.aliyun.com/nexus/content/groups/public</url>
-	</mirror> 
+	<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+    </mirror> 
 </mirrors>
 ```
 
@@ -89,15 +89,15 @@ mvn install #安装到本地仓库
 ```xml
 <build> 
   <plugins>
-		<plugin> 
-      <groupId>org.apache.tomcat.maven</groupId> 
-      <artifactId>tomcat7-maven-plugin</artifactId> 				
-      <version>2.1</version>
-			<configuration>
-				<port>80</port>
-				<path>/</path> 
-      </configuration>
-		</plugin> 
+	<plugin> 
+      		<groupId>org.apache.tomcat.maven</groupId> 
+      		<artifactId>tomcat7-maven-plugin</artifactId> 				
+      		<version>2.1</version>
+		<configuration>
+			<port>80</port>
+			<path>/</path> 
+      		</configuration>
+	</plugin> 
   </plugins>
 </build>
 ```
@@ -199,19 +199,19 @@ Maven对项目构建的生命周期划分为3套
 ```xml
 <build> 
   <plugins>
-		<plugin> 
-      <groupId>org.apache.maven.plugins</groupId> 
-      <artifactId>maven-source-plugin</artifactId> 
-      <version>2.2.1</version>
-			<executions>
-				<execution> 
-          <goals>
-						<goal>jar</goal> 
-          </goals>
-					<phase> generate-test-resources</phase> </execution>
-				</executions> 
-    </plugin>
-	</plugins> 
+	<plugin> 
+      		<groupId>org.apache.maven.plugins</groupId> 
+      		<artifactId>maven-source-plugin</artifactId> 
+      		<version>2.2.1</version>
+		<executions>
+			<execution> 
+          			<goals>
+					<goal>jar</goal> 
+          			</goals>
+				<phase> generate-test-resources</phase> </execution>
+			</executions> 
+    	</plugin>
+  </plugins> 
 </build>
 ```
 
